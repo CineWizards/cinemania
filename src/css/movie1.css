@@ -1,0 +1,473 @@
+/* Movie1 */
+
+
+/* 1) Search Bar Block */
+
+.movie1-searchbar {
+  margin-bottom: 30px;
+}
+
+.movie1-searchbar_form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+}
+
+/* İnput: Film & Select: Year & Search */
+
+.movie1-searchbar_input_film {
+  width: 173px;
+  height: 40px;
+  margin-right: 12px;
+  padding-left: 24px;
+  padding-right: 30px;
+
+}
+
+.movie1-search {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid var(--white-smoke);
+  border-radius: 8px;
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--light-gray);
+}
+
+body.light-theme .movie1-searchbar_input_film {
+  border: 1px solid var(--gray);
+}
+
+body.light-theme .movie1-searchbar_select_year {
+  border: 1px solid var(--gray);
+}
+
+/* Hidden Clear Button in Film */
+
+.movie1-searchbar_clear_button {
+  left: 55%;
+  top: 11%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.movie1-searchbar_clear_button_hide {
+  display: none;
+}
+
+.icon-clear_button {
+  stroke: #f8f8f8;
+}
+
+.icon-clear_button:hover {
+  stroke: #F87719;
+}
+
+body.light-theme .icon-clear_button {
+  stroke: #282828;
+}
+
+body.light-theme .icon-clear_button:hover {
+  stroke: #F87719;
+}
+
+/* Submit Button */
+
+.movie1-searchbar_submit_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+  border-radius: 50%;
+}
+
+.icon-submit_button {
+  stroke: var(--white-smoke);
+}
+
+body.light-theme .icon-submit_button {
+  stroke: var(--black);
+}
+
+.movie1-searchbar_submit_button:hover .icon-submit_button,
+.movie1-searchbar_submit_button:focus .icon-submit_button {
+  stroke: var(--orange);
+}
+
+/*
+.warning {
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: var(--white-smoke);
+}
+
+body.light-theme .warning {
+  color: var(--black);
+}
+
+body.light-theme .choose-movie {
+  color: var(--black);
+}
+
+.oops-not-find-hide {
+  display: none;
+}
+
+.choose-movie-hide {
+  display: none;
+}
+
+.tui-pagination-hide {
+  display: none;
+}
+*/
+
+
+/* Mobile - Search Bar Block */
+
+@media screen and (min-width:320px) {
+
+  .movie1-searchbar {
+
+    padding-bottom: 16px;
+    margin-bottom: 50px;
+  }
+
+  .movie1-searchbar_form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+    height: 40px;
+  }
+
+  .search.light-theme {
+    border: 1px solid #595959;
+    color: var(--gray);
+  }
+
+  .movie1-searchbar_input_film {
+    width: 173px;
+    height: 40px;
+    margin-right: 12px;
+    padding-left: 24px;
+    padding-right: 30px;
+
+  }
+
+  .movie1-searchbar_select_year {
+    width: 95px;
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 15px;
+
+  }
+
+  input::placeholder {
+    color: --light-gray;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .movie1-searchbar_clear_button {
+    top: 50%;
+    left: 53%;
+  }
+
+  .movie1-searchbar_submit_button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .movie1-searchbar_submit_button:hover,
+  .movie1-searchbar_submit_button:focus {
+    background: var(--white-smoke);
+    border: 1px solid orangered;
+    border-color: var(--orange);
+  }
+
+  .catalog-gallery-card {
+    margin: auto;
+    text-align: center;
+  }
+
+}
+
+/* Tablet - Search Bar Block */
+
+@media screen and (min-width:768px) {
+
+  .movie1-searchbar {
+
+    padding-bottom: 36px;
+    margin-bottom: 0;
+  }
+
+  .movie1-searchbar_form {
+    flex-wrap: nowrap;
+    margin: auto;
+    width: 548px;
+    height: 44px;
+  }
+
+  .movie1-searchbar_input_film {
+    width: 188px;
+    height: 44px;
+  }
+
+  .movie1-searchbar_select_year {
+    height: 44px;
+    padding-left: 20px;
+    margin-right: 12px;
+
+  }
+
+  .movie1-searchbar_clear_button {
+    left: 28%;
+  }
+
+  .movie1-searchbar_submit_button {
+    margin-top: 0;
+    width: 44px;
+    height: 44px;
+  }
+
+}
+
+/* Desktop - Search Bar Block */
+
+@media screen and (min-width:1280px) {
+
+  .movie1-searchbar {
+
+    padding-bottom: 48px;
+  }
+
+  .movie1-search {
+
+    font-size: 16px;
+
+  }
+
+  .movie1-searchbar_form {
+    width: 795px;
+    height: 48px;
+  }
+
+  .movie1-searchbar_input_film {
+    margin-right: 20px;
+    width: 315px;
+    height: 48px;
+
+  }
+
+  .movie1-searchbar_select_year {
+    height: 48px;
+
+  }
+
+  .movie1-searchbar_clear_button {
+    left: 35%;
+    right: 74px;
+  }
+
+  .movie1-searchbar_submit_button {
+    width: 48px;
+    height: 48px;
+  }
+
+}
+
+
+
+
+/* 2) Movie List Block */
+
+
+
+/* Global styles for all devices */
+.movie1-movielist_card {
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 63.48%,
+      rgba(0, 0, 0, 0.9) 92.16%);
+  border-radius: 0.5rem;
+  /* 5px */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie1-movielist_card:hover {
+  transform: scale(1.05);
+}
+
+.movie1-movielist-img_wrapper {
+  width: 100%;
+  height: 100%;
+  /* Kartın tamamını kaplaması için */
+  overflow: hidden;
+}
+
+.movie1-movielist_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie1-movielist_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  /* 10px */
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Film adı, türü ve yılı için */
+.movie1-movielist_info_title {
+  text-align: left;
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 2rem;
+  /* 20px */
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+}
+
+/* Tür için (genre) */
+.movie1-movielist_info_descr {
+  color: var(--grey, #b7b7b7);
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 2rem;
+  /* 20px */
+  font-weight: 500;
+}
+
+.movie1-movielist_info_list {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  /* 10px */
+}
+
+.movie1-movielist_stars_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.movie1-movielist_rating {
+  background-color: gold;
+  height: 1rem;
+  /* 10px */
+  border-radius: 0.5rem;
+  /* 5px */
+}
+
+/* Layout ayarlamaları: Her satırda tam olarak 3 kart */
+.movie1-movielist_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Her satırda 3 kart */
+  gap: 2rem;
+  /* 20px boşluk */
+}
+
+/* Desktop styles */
+@media (min-width: 64rem) {
+
+  /* 1024px */
+  .movie1-movielist_card {
+    width: 39.5rem;
+    /* 395px */
+    height: 57.4rem;
+    /* 574px */
+  }
+
+  .movie1-movielist_info_title {
+    font-size: 2rem;
+    /* 20px */
+  }
+
+  .movie1-movielist_info_descr {
+    font-size: 2rem;
+    /* 20px */
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+
+  /* 768px - 1023px */
+  .movie1-movielist_list {
+    grid-template-columns: repeat(3, 1fr);
+    /* Tablet'te de her satırda 3 kart */
+  }
+
+  .movie1-movielist_card {
+    width: 22.4rem;
+    /* 224px */
+    height: 32.5rem;
+    /* 325px */
+  }
+
+  .movie1-movielist_info_title {
+    font-size: 1.8rem;
+    /* 18px */
+  }
+
+  .movie1-movielist_info_descr {
+    font-size: 1.8rem;
+    /* 18px */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 47.9375rem) {
+
+  /* 767px ve altı */
+  .movie1-movielist_list {
+    grid-template-columns: 1fr;
+    /* Mobile'da tek sütun */
+  }
+
+  .movie1-movielist_card {
+    width: 28rem;
+    /* 280px */
+    height: 40.6rem;
+    /* 406px */
+  }
+
+  .movie1-movielist_info_title {
+    font-size: 1.76rem;
+    /* 17.6px */
+  }
+
+  .movie1-movielist_info_descr {
+    font-size: 1.6rem;
+    /* 16px */
+  }
+}
