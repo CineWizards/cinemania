@@ -10,7 +10,8 @@
 
 #movie2-genre {
     background-color: transparent;
-    width: 26rem;
+    width: 100%;
+    max-width: 26rem;
     padding: 1rem 1rem;
     color: var(--text-primary-color);
     -webkit-box-sizing: border-box;
@@ -70,7 +71,7 @@
 
 .movie2-container_movies-card_details-title
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.17;
     padding: 0 2rem;
     margin-bottom: .5rem;
@@ -88,7 +89,7 @@
 
 .movie2-container_movies-card_details-info_genre
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.17;
     color: var(--text-primary-color);
 }
@@ -136,4 +137,25 @@
     font-size: 3.2rem;
     line-height: 1.125;
     color: var(--text-secondary-color)
+}
+
+
+@media only screen and (max-width: 1279px) {
+
+}
+
+@media screen and (max-width: 767px) {
+    .movie2-container_movies
+    {
+        gap: 2;
+    }
+    .movie2-container_movies-card
+    {
+        width: 100%;
+    }
+
+    .movie2-container_movies-card:hover
+    {
+        transform: none;
+    }
 }
