@@ -1,0 +1,25 @@
+<section class="movie_info_popup">
+    <div class="movie_info_popup_container">
+        <button class="model-close-button" type="button">
+            <svg class="model-close-svg" width="10.5" height="10.5">
+                <use href="../img/nav_bar_svg.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="movie_info_popup_img">
+
+        </div>
+
+        <div class="movie_info_popup_info">
+            <h2 class="movie_info_popup_title"></h2>
+            <p class="movie_info_popup_description"></p>
+            <button class="movie_info_popup_button">Add to my library</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.model-close-button').addEventListener('click', function () {
+            document.querySelector('.movie_info_popup').style.display = 'none';
+        });
+    </script>
+
+</section>
