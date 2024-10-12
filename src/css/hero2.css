@@ -17,12 +17,20 @@
   z-index: 1;
   text-align: center;
   padding: 20px;
-  background-color: transparent;
+  background: transparent;
 }
 
 @media (max-width: 767px) {
   .library-hero-container {
     background-image: url('../img/HeroTwoMobile.png');
+  }
+  .library-header {
+    font-size: 3.2rem;
+    line-height: 1.17;
+  }
+  .library-text {
+    font-size: 1.4rem;
+    line-height: 1.17;
   }
 }
 
@@ -30,10 +38,26 @@
   .library-hero-container {
     background-image: url('../img/HeroTwoMobile.png');
   }
+  .library-header {
+    font-size: 4.4rem;
+    line-height: 1.17;
+  }
+  .library-text {
+    font-size: 1.4rem;
+    line-height: 1.17;
+  }
 }
 
 @media (min-width: 1280px) {
   .library-hero-container {
     background-image: url('../img/HeroTwoDesktop.png');
+  }
+  .library-header {
+    font-size: 6.5rem;
+    line-height: 1.17;
+  }
+  .library-text {
+    font-size: 1.6rem;
+    line-height: 1.17;
   }
 }
