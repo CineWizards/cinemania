@@ -110,39 +110,18 @@ body.light-theme .icon-clear_button:hover {
 
 /* Submit Button */
 
-.movie1-searchbar_submit_button {
-  position: relative;
-  
-}
-
-.movie1-searchbar_submit_button_background {
-  background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+.movie1-movielist_submit_button {
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
-  width: 4.8rem;
-  height: 4.8rem;
-  position: absolute;
-  left: 0rem;
-  top: 0rem;
+  background: var(--linear-gradient-1);
+  border: none;
 }
 
-.icon-submit_button {
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  left: 1.4rem;
-  top: 1.4rem;
-  overflow: visible;;
-  /*stroke: var(--white-smoke);
-  transition: stroke 0.3s ease;*/ 
-}
-
-body.light-theme .icon-submit_button {
-  stroke: var(--black);
-}
-
-.movie1-searchbar_submit_button:hover .icon-submit_button,
-.movie1-searchbar_submit_button:focus .icon-submit_button {
-  stroke: var(--black);
+.movie1-movielist_submit_button i {
+  color: white;
+  font-size: 20rem;
+  z-index: 20;
 }
 
 
@@ -335,8 +314,8 @@ body.light-theme .icon-submit_button {
 }
 
 .movie1-movielist_card_img {
-  width: 39.5rem; /* %100 vardı */
-  height: 57.4rem;
+  width: 100%; /* %100 vardı */
+  /* height: 57.4rem; */
   border-radius: 5px;
   
   position: relative;
@@ -392,4 +371,96 @@ body.light-theme .icon-submit_button {
   .movie1-movielist_container:hover {
     transform: none;
   }
+}
+
+/* 3) Pagination Block */
+
+.tui-pagination {
+  height: 40px;
+  margin: 14px 0 12px;
+  line-height: normal;
+  text-align: center;
+  font-size: 0;
+}
+
+.tui-pagination .tui-page-btn {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 14px 0 0px;
+  margin-left: 0;
+  margin-right: 16px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+body.light-theme .tui-pagination .tui-page-btn {
+  border: 1px solid var(--orange);
+  color: var(--black);
+}
+
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  color: var(--white);
+  background: var(--liner);
+  border-radius: 50%;
+  cursor: default;
+  border: none;
+}
+
+.tui-pagination .tui-page-btn:hover {
+  background: var(--liner);
+  border: none;
+}
+
+body.light-theme .tui-pagination .tui-page-btn:hover {
+  color: var(--white);
+}
+
+.tui-pagination .tui-prev,
+.tui-pagination .tui-next {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  font-size: 0;
+  line-height: 26px;
+  white-space: nowrap;
+  font-weight: normal;
+  border: none;
+}
+
+.tui-pagination .tui-prev {
+  margin-right: 10px;
+}
+
+.tui-pagination .tui-ico-first {
+  display: none;
+  background: none;
+  border: none;
+}
+
+.tui-pagination .tui-first {
+  display: none;
+  background: none;
+  border: none;
+}
+
+.tui-pagination .tui-ico-last {
+  display: none;
+  background: none;
+  border: none;
+}
+
+.tui-pagination .tui-last {
+  display: none;
+  background: none;
+  border: none;
 }
