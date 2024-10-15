@@ -1,9 +1,9 @@
 .library-hero-container {
+  background-image: url('../img/HeroTwoDesktop.png');
+  height: 75vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   background-size: cover;
-  background-position: center;
   width: 100%;
   position: relative;
 }
@@ -16,9 +16,15 @@
   flex-direction: column;
   flex-wrap: nowrap;
   z-index: 1;
-  text-align: center;
-  padding: 20px;
+  padding: 2rem;
+  width: 40%;
   background: transparent;
+}
+.library-header {
+  font-size: 6.5rem;
+}
+.library-text {
+  font-size: 1.6rem;
 }
 
 @media (max-width: 767px) {
@@ -41,27 +47,12 @@
     background-image: url('../img/HeroTwoTablet.png');
   }
   .library-hero-text {
-    width: 50%;
+    width: 60%;
   }
   .library-header {
     font-size: 4.4rem;
   }
   .library-text {
     font-size: 1.4rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .library-hero-container {
-    background-image: url('../img/HeroTwoDesktop.png');
-  }
-  .library-hero-text {
-    width: 30%;
-  }
-  .library-header {
-    font-size: 6.5rem;
-  }
-  .library-text {
-    font-size: 1.6rem;
   }
 }
