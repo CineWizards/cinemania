@@ -80,7 +80,7 @@ body.light-theme .movie1-searchbar_select_year {
 
 .movie1-searchbar_clear_button {
   box-sizing: border-box;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   width: 18px;
   height: 18px;
   position: relative;
@@ -187,7 +187,7 @@ body.light-theme .icon-submit_button {
   }
 
   input::placeholder {
-    color: --light-gray;
+    color: var(--light-gray);
     font-family: "Roboto-Medium", sans-serif;;
     font-style: normal;
     font-weight: 500;
@@ -323,6 +323,7 @@ body.light-theme .icon-submit_button {
 .movie1-movielist_container {
   position: relative;
   width: calc((100% - 6rem) / 3);
+  /* width: 100%; */
   border-radius: 1rem;
   transition: all ease-in-out .3s;
   overflow: hidden;
@@ -375,42 +376,6 @@ body.light-theme .icon-submit_button {
   color: var(--highlight-color);
 }
 
-.movie1-movielist_button {
-  padding: 1rem 2rem;
-  margin: 3rem auto;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.5;
-  border-radius: 20px;
-  background-image: var(--linear-gradient-2);
-  text-decoration: none;
-  color: var(--background-color);
-  transition: all .2s ease-in-out;
-}
-
-.movie1-movielist_button:hover {
-  background-image: none;
-  background-color: var(--text-secondary-color);
-  color: var(--highlight-color);
-  border: solid .1rem var(--highlight-color)
-}
-
-.movie1-movielist_no-movie {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 15rem 0;
-}
-
-.movie1-movielist-no-movie_error {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 3.2rem;
-  line-height: 1.125;
-  color: var(--text-secondary-color)
-}
 
 
 @media only screen and (max-width: 1279px) {}
