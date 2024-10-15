@@ -116,13 +116,24 @@ body.light-theme .icon-clear_button:hover {
   border-radius: 50%;
   background: var(--linear-gradient-1);
   border: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .movie1-movielist_submit_button i {
-  color: white;
-  font-size: 20rem;
-  z-index: 20;
+  color: var(--text-secondary-color);
+  font-size: 1.6rem;
+  transition: all 0.2s ease-in-out;
 }
+
+.movie1-movielist_submit_button:hover {
+  background: transparent;
+  border: 0.1rem solid var(--highlight-color);
+}
+
+.movie1-movielist_submit_button:hover i {
+  color: var(--highlight-color);
+}
+
 
 
 
