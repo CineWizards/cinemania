@@ -63,7 +63,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--linear-gradient-1);
+  background: var(--linear-gradient-2);
   border-radius: 3.4rem;
   transition: background-color 0.4s;
 }
@@ -96,7 +96,7 @@
 }
 
 input:checked + .slider {
-  background-color: var(--linear-gradient-1);
+  background: var(--linear-gradient-2);
 }
 
 input:checked + .slider .nav-bar-mode-svg-button {

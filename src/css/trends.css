@@ -1,0 +1,89 @@
+/* General styling */
+.Tcontainer {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+.Theader {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.Theader {
+    color: white;
+    margin: 0; 
+    font-size: 24px;
+    font-weight: bold; 
+}
+
+.see-all {
+    color: #F87719; 
+    text-decoration: none;
+    font-weight: 700; 
+    font-size: 18px; 
+}
+
+.see-all:hover {
+    text-decoration: underline;
+}
+
+/* Card container styling */
+.card-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.card {
+    position: relative; 
+    width: 30%; 
+    overflow: hidden; 
+}
+
+.card img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.card-info {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    padding: 10px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    text-align: left; 
+}
+
+.card-info h3 {
+    font-size: 20px;
+    margin: 0; 
+}
+
+.card-info p {
+    font-size: 14px;
+    margin: 5px 0; 
+}
+
+.rating {
+    font-size: 18px;
+    color: #f39c12;
+}
+
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%; 
+    }
+}
