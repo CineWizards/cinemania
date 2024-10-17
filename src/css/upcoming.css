@@ -1,0 +1,132 @@
+.upcomingContainer {
+    padding: 40px 20px;
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upcomingContainer h2 {
+    margin-bottom: 20px;
+  }
+  
+  .movieCard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1211px;
+    position: relative;
+    margin: 50px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .moviePoster {
+    width: 66%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .movieDetails {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .movieTitle {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .movieDetailsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .movieDetailsTitles h1,
+  .movieDetailsDescription p {
+    font-size: 16px; /* Her iki bölüme de aynı font boyutunu uyguluyoruz */
+    font-weight: 500;
+    color: #B7B7B7;
+  }
+  
+  .movieDetailsTitles h1 {
+    margin-bottom: 10px; /* Başlıklar arası boşluk */
+  }
+  
+  .movieDetailsDescription p {
+    color: white;
+    margin-bottom: 10px; /* Paragraflar arası boşluk */
+  }
+  
+  
+  
+  .movieDetailsAbout {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .add-library-btn {
+    width: 40%;
+    font-size: 14px;
+    background-image: linear-gradient(to left, #FFC226 0%, #F84119 51%, #FFC226 100%);
+    margin: 20px 0;
+    padding: 12px 24px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    border-radius: 74px;
+  }
+  
+  .add-library-btn:hover {
+    background-color: #ff4500;
+    background-position: right center;
+    color: #000000;
+  }
+  
+  @media (max-width: 1024px) {
+    .movieCard {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .moviePoster {
+      width: 100%;
+      height: auto;
+    }
+  
+    .movieDetails {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .movieDetailsContainer {
+      flex-direction: column;
+    }
+  
+    .movieDetailsTitles,
+    .movieDetailsDescription {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .add-library-btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .movieDetailsTitles,
+    .movieDetailsDescription {
+      width: 100%;
+    }
+  
+    .add-library-btn {
+      width: 100%;
+    }
+  }
