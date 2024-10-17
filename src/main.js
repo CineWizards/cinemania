@@ -1,0 +1,7 @@
+import "./js/apiTrendsUpcoming"
+import "./js/darkmodeToggle"
+import "./js/filmFilterAndPagination"
+import "./js/footerGoitStudents"
+import "./js/localLibraryHandling"
+import "./js/popupAndLibrary"
+import "./js/watchTrailerControl"
