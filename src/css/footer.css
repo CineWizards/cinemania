@@ -17,6 +17,12 @@
   height: 14px;
 }
 
+.about-link
+{
+  color: var(--highlight-color);
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .footer-p {
     font-size: 1.4rem;
