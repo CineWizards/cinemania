@@ -34,4 +34,4 @@
                 <button class="add-library-btn">Add to my library</button>
             </div>
         `,o.appendChild(r)})}function h(n){const o={year:"numeric",month:"long",day:"numeric"};return new Date(n).toLocaleDateString(void 0,o)}function s(n){const o={28:"Action",35:"Comedy",18:"Drama",27:"Horror"};return n.map(e=>o[e]).join(", ")}p("action");document.querySelector(".about-link").addEventListener("click",()=>{document.querySelector(".about").classList.remove("hidden"),document.querySelector("header").classList.add("hidden"),document.querySelector("main").classList.add("hidden"),document.querySelector(".footer-container").classList.add("hidden")});document.querySelector(".about-x").addEventListener("click",()=>{document.querySelector(".about").classList.add("hidden"),document.querySelector("header").classList.remove("hidden"),document.querySelector("main").classList.remove("hidden"),document.querySelector(".footer-container").classList.remove("hidden")});
-//# sourceMappingURL=main-Bxiybvv_.js.map
+//# sourceMappingURL=main-cat43Byi.js.map
