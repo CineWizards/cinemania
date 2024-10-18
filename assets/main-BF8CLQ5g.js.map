@@ -1,0 +1,1 @@
+{"version":3,"file":"main-BF8CLQ5g.js","sources":["../../src/js/footerGoitStudents.js"],"sourcesContent":["document.querySelector('.footer-container').addEventListener('mouseover', () => {\n    console.log(\"Test\");\n});"],"names":[],"mappings":"ssBAAA,SAAS,cAAc,mBAAmB,EAAE,iBAAiB,YAAa,IAAM,CAC5E,QAAQ,IAAI,MAAM,CACtB,CAAC"}
