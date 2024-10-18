@@ -71,7 +71,7 @@ function formatMovieDate(dateStr) {
 }
 
 
-getWeeklyTrendingMovies('horror');
+getWeeklyTrendingMovies('sci-fi');
 
 
 // Upcoming API
