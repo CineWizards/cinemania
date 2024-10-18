@@ -1,78 +1,56 @@
-// Function to dynamically create movie cards
-function createMovieCard(movie) {
-    const cardContainer = document.querySelector('.card-container');
-  
-    // Create card element
-    const card = document.createElement('div');
-    card.classList.add('card');
-  
-    // Create and set movie image
-    const img = document.createElement('img');
-    img.src = movie.imageUrl;  // assuming 'imageUrl' is part of the API response
-    img.alt = movie.title;
-  
-    // Create card info section
-    const cardInfo = document.createElement('div');
-    cardInfo.classList.add('card-info');
-  
-    // Movie title
-    const title = document.createElement('h3');
-    title.textContent = movie.title;
-  
-    // Movie genre and year
-    const description = document.createElement('p');
-    description.textContent = `${movie.genre} | ${movie.year}`;
-  
-    // Movie rating
-    const rating = document.createElement('div');
-    rating.classList.add('rating');
-    rating.textContent = movie.rating;  // e.g., '★★★★★' or a numeric value
-  
-    // Trailer button
-    const trailerButton = document.createElement('button');
-    trailerButton.classList.add('trailer-btn');
-    trailerButton.textContent = 'Watch Trailer';
-    
-    // Set the trailer link in the button's data attribute
-    trailerButton.setAttribute('data-trailer', movie.trailerUrl); // assuming 'trailerUrl' is part of the API response
-  
-    // Add event listener to handle trailer opening
-    trailerButton.addEventListener('click', function() {
-      const trailerLink = this.getAttribute('data-trailer');
-      if (trailerLink) {
-        // Open trailer in popup window if available
-        window.open(trailerLink, '_blank', 'width=800,height=600');
-      } else {
-        // Show alert if no trailer is available
-        alert('Trailer not available for this movie.');
-      }
-    });
-  
-    // Append elements to card info and card
-    cardInfo.appendChild(title);
-    cardInfo.appendChild(description);
-    cardInfo.appendChild(rating);
-    cardInfo.appendChild(trailerButton);
-    
-    card.appendChild(img);
-    card.appendChild(cardInfo);
-  
-    // Append card to the card container
-    cardContainer.appendChild(card);
+document.addEventListener('DOMContentLoaded', function () {
+  const trailerButtons = document.querySelectorAll('.trailer-btn');
+
+  trailerButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+          const trailerExists = button.getAttribute('data-trailer');
+          const buttonState = button.getAttribute('data-state') || 'error'; // Default to 'error'
+
+          // Toggle the button state
+          button.setAttribute('data-state', buttonState === 'error' ? 'video' : 'error');
+
+          if (buttonState === 'error') {
+              // No trailer available, show error popup
+              const errorMessage = `
+                  <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100%; background-color: black; color: white; text-align: left; padding: 20px;">
+                      <img src="https://cdn-icons-png.flaticon.com/512/3094/3094840.png" alt="Camera Rolling Icon" style="width: 100px; margin-bottom: 20px;">
+                      <h2 style="font-size: 3rem; margin-bottom: 10px;">OOPS...</h2>
+                      <p style="font-size: 2rem;">We are very sorry! But we couldn’t find the trailer.</p>
+                  </div>
+              `;
+
+              openPopup(errorMessage);
+          } else {
+              // Trailer exists, display the trailer in a modal or popup
+              const iframeHTML = `
+                  <iframe width="560" height="315" 
+                  src="https://www.youtube.com/embed/IAdCsNtEuBU?si=5zE_DMVmJU16oWY4" 
+                  title="YouTube video player" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                  picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen></iframe>`;
+
+              openPopup(iframeHTML);
+          }
+      });
+  });
+
+  // Function to open a popup window with the provided content
+  function openPopup(content) {
+      const popupWindow = window.open('', '_blank', 'width=600,height=400');
+      popupWindow.document.write(`
+          <html>
+              <head>
+                  <title>Trailer</title>
+                  <style>
+                      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+                  </style>
+              </head>
+              <body>
+                  ${content}
+              </body>
+          </html>
+      `);
+      popupWindow.document.close();
   }
-  
-  // Example of how you would handle the API response and create cards dynamically
-  function handleApiResponse(movies) {
-    movies.forEach(movie => {
-      createMovieCard(movie);  // Create card for each movie returned by the API
-    });
-  }
-  
-  // Fetch movies from the API (replace 'your-api-url' with the actual API endpoint)
-  fetch('your-api-url')
-    .then(response => response.json())
-    .then(data => {
-      handleApiResponse(data.movies);  // assuming 'movies' is an array in the API response
-    })
-    .catch(error => console.error('Error fetching movie data:', error));
-  
+});
