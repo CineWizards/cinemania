@@ -44,14 +44,6 @@
     cursor: pointer;
 }
 
-.hidden
-{
-display: none;
-overflow: hidden;
-z-index: -1;
-}
-
-
 .about-container
 {
     position: relative;
