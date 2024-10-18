@@ -1,7 +1,9 @@
 .footer-container {
   background-color: var(--background-color);
   display: flex;
-  width: 100vw;
+  width: 100%;
+  margin: 3rem 0;
+  justify-content: center;
 }
 
 .footer-p {
@@ -13,8 +15,8 @@
 
 .footer-svg {
   display: inline-flex;
-  width: 14px;
-  height: 14px;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .about-link

@@ -9,7 +9,21 @@
     --linear-gradient-2: linear-gradient(90deg, #FFC226, #F84119);
     --highlight-color: #F87719;
   }
-  
+
+  ::-webkit-scrollbar {
+    background: var(--text-secondary-color);
+    width: 2rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--background-color);
+    border-radius: 3rem;
+    border: .5rem solid var(--text-secondary-color)
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--highlight-color);
+  }
+
   html { 
   font-size: 10px;
   }
@@ -36,4 +50,5 @@
   footer
   {
     width: 100%;
+    position: relative;
   }
