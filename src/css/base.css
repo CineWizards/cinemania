@@ -10,52 +10,52 @@
     --highlight-color: #F87719;
   }
 
-  ::-webkit-scrollbar {
-    background: var(--text-secondary-color);
-    width: 2rem;
-  }
+::-webkit-scrollbar {
+  background: var(--text-secondary-color);
+  width: 2rem;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: var(--background-color);
-    border-radius: 3rem;
-    border: .5rem solid var(--text-secondary-color)
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--highlight-color);
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--background-color);
+  border-radius: 3rem;
+  border: .5rem solid var(--text-secondary-color)
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-color);
+}
 
-  html { 
-  font-size: 10px;
-  }
-  
-  body.lightmode {
-    --background-color: #FFFFFF;
-    --text-primary-color: #595959;
-    --text-secondary-color: #111111;
-    --linear-gradient-1: linear-gradient(90deg, #F84119, #F89F19);
-    --linear-gradient-2: linear-gradient(90deg, #FFC226, #F84119);
-    --highlight-color: #F87719;
-  }
+html { 
+font-size: 10px;
+}
 
-  body {
-    background-color: var(--background-color);
-    max-width: 1440px;
-    width: 100vw;
-    margin: 0 auto;
-    font-family: "Roboto", sans-serif;
-  }
+body.lightmode {
+  --background-color: #FFFFFF;
+  --text-primary-color: #595959;
+  --text-secondary-color: #111111;
+  --linear-gradient-1: linear-gradient(90deg, #F84119, #F89F19);
+  --linear-gradient-2: linear-gradient(90deg, #FFC226, #F84119);
+  --highlight-color: #F87719;
+}
 
-  header,
-  main,
-  footer
-  {
-    width: 100%;
-    position: relative;
-  }
+body {
+  background-color: var(--background-color);
+  max-width: 1440px;
+  width: 100vw;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+}
+
+header,
+main,
+footer
+{
+  width: 100%;
+  position: relative;
+}
 
 .hidden
 {
-display: none;
-overflow: hidden;
-z-index: -1;
+  display: none;
+  opacity: 0;
+  z-index: -1;
 }
