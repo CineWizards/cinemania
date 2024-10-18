@@ -28,7 +28,7 @@
   font-size: 10px;
   }
   
-  body.light-mode {
+  body.lightmode {
     --background-color: #FFFFFF;
     --text-primary-color: #595959;
     --text-secondary-color: #111111;
