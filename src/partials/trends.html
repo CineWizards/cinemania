@@ -1,32 +1,58 @@
-<div class="tcontainer">
-    <div class="theader">
-        <h2 class="theader-title">Weekly Trends</h2>
-        <a href="#" class="see-all">See all</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Trends</title>
+
+    
+    <link rel="stylesheet" href="trends.css">
+</head>
+<body>
+    <div class="tcontainer">
+        <div class="theader">
+            <h2 class="theader-title">Weekly Trends</h2>
+            <a href="#" class="see-all">See all</a>
+        </div>
+
+        <div class="card-container">
+            
+            <div class="card" id="ghosted">
+                <img src="img/ghosted.png" alt="Ghosted">
+                <div class="card-info">
+                    <h3>Ghosted</h3>
+                    <p>Drama, Action | 2023</p>
+                    <div class="rating">★★★★★</div>
+                    
+                    <button class="trailer-btn" data-trailer="https://www.youtube.com/watch?v=your-trailer-link">Watch Trailer</button>
+                </div>
+            </div>
+
+            
+            <div class="card" id="quantumania">
+                <img src="img/antman.png" alt="Quantumania">
+                <div class="card-info">
+                    <h3>Quantumania</h3>
+                    <p>Drama, Action | 2023</p>
+                    <div class="rating">★★★★☆</div>
+                    
+                    <button class="trailer-btn" data-trailer="https://www.youtube.com/watch?v=your-trailer-link">Watch Trailer</button>
+                </div>
+            </div>
+
+            <div class="card" id="evil-dead-rise">
+                <img src="img/evil.png" alt="Evil Dead Rise">
+                <div class="card-info">
+                    <h3>Evil Dead Rise</h3>
+                    <p>Drama, Comedy | 2023</p>
+                    <div class="rating">★★★★☆</div>
+                    <button class="trailer-btn" data-trailer="">Watch Trailer</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-container">
-        <div class="card" id="ghosted">
-            <img src="img/ghosted.png" alt="Ghosted">
-            <div class="card-info">
-                <h3>Ghosted</h3>
-                <p>Drama, Action | 2023</p>
-                <div class="rating">★★★★★</div>
-            </div>
-        </div>
-        <div class="card" id="quantumania">
-            <img src="img/antman.png" alt="Quantumania">
-            <div class="card-info">
-                <h3>Quantumania</h3>
-                <p>Drama, Action | 2023</p>
-                <div class="rating">★★★★☆</div>
-            </div>
-        </div>
-        <div class="card" id="evil-dead-rise">
-            <img src="img/evil.png" alt="Evil Dead Rise">
-            <div class="card-info">
-                <h3>Evil Dead Rise</h3>
-                <p>Drama, Comedy | 2023</p>
-                <div class="rating">★★★★☆</div>
-            </div>
-        </div>
-    </div>
-</div>
+
+    
+    <script src="watchTrailerControl.js"></script>
+</body>
+</html>
