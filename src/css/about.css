@@ -41,6 +41,7 @@
 {
     position: absolute;
     right: 3rem;
+    cursor: pointer;
 }
 
 .about-container
