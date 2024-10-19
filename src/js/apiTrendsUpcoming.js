@@ -72,10 +72,12 @@ function getGenresMovies(genreIds) {
         878: "Sci-Fi",
         12: "Adventure",
         10749: "Romance",
-        // Diğer türler eklenebilir...
     };
+    const genres = genreIds
+    .map(id => genreMap[id])
+    .filter(Boolean); 
 
-    return genreIds.map(id => genreMap[id]).join(', ');
+    return genres.join(', ');
 }
 
 // Tarihi okunabilir formata çeviren yardımcı fonksiyon
