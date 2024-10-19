@@ -1,7 +1,7 @@
 // Trends API
 async function getWeeklyTrendingMovies(filter) {
     const apiKey = 'f7b35a6831dd791ecabf3c844be80c1e';
-    const apiUrl = `https://api.themoviedb.org/3/trending/movie/day?filter=${filter}&api_key=${apiKey}`;
+    const apiUrl = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`;
 
     try {
         const response = await fetch(apiUrl);
@@ -10,7 +10,18 @@ async function getWeeklyTrendingMovies(filter) {
         }
 
         const data = await response.json();
-        const movies = data.results.slice(0, 3); // İlk 3 filmi al
+        let movies = data.results;
+
+        // Eğer filtre varsa, filmleri bu türe göre filtrele
+        if (filter) {
+            movies = movies.filter(movie => {
+                const genreNames = getGenresMovies(movie.genre_ids);
+                return genreNames.toLowerCase().includes(filter.toLowerCase());
+            });
+        }
+
+        // İlk 3 filmi al
+        movies = movies.slice(0, 3);
 
         // Filmleri HTML'de göster
         renderTrendingMovies(movies);
@@ -35,7 +46,7 @@ function renderTrendingMovies(movies) {
             <img src="${imageUrl}" alt="${movie.title}">
             <div class="card-info">
                 <h3>${movie.title}</h3>
-                <p>${getGenres(movie.genre_ids)} | ${formatMovieDate(movie.release_date)}</p>
+                <p>${getGenresMovies(movie.genre_ids)} | ${formatMovieDate(movie.release_date)}</p>
                 <div class="rating">${getStarRating(movie.vote_average)}</div>
             </div>
         `;
@@ -58,21 +69,23 @@ function getGenresMovies(genreIds) {
         35: "Comedy",
         18: "Drama",
         27: "Horror",
+        878: "Sci-Fi",
+        12: "Adventure",
+        10749: "Romance",
+        // Diğer türler eklenebilir...
     };
 
-    return genreIds.map(id => genreMap[id] || "Unknown").join(', ');
+    return genreIds.map(id => genreMap[id]).join(', ');
 }
 
-// Tarihi okunabilir formata çeviren yardımcı fonksiyon (İsmi değiştirildi)
+// Tarihi okunabilir formata çeviren yardımcı fonksiyon
 function formatMovieDate(dateStr) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const date = new Date(dateStr);
     return date.toLocaleDateString(undefined, options);
 }
-
-
-getWeeklyTrendingMovies('sci-fi');
-
+// Filtreye göre filmleri çek
+getWeeklyTrendingMovies('comedy');
 
 // Upcoming API
 async function getUpcomingMovies(filter) {
