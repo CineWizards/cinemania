@@ -1,18 +1,12 @@
-
-
 /* Movie1 */
 
 .movie1-container {
-  background-color: #000000;
+  background-color: var(--background-color);
   width: 100%;
   margin: 0 auto;
 }
 
-
-
-
 /* 1) Search Bar Block */
-
 
 .movie1-searchbar {
   display: flex;
@@ -21,6 +15,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
+  margin-top: 3rem;
 }
 
 .movie1-searchbar_form {
@@ -29,9 +24,7 @@
   align-items: center;
 }
 
-
 /* İnput: Film & Select: Year & Search */
-
 
 .movie1-searchbar_input_film,
 .movie1-searchbar_select_year {
@@ -53,7 +46,7 @@
   background-color: #111111;
   color: var(--grey, #b7b7b7);
   text-align: center;
-  font-family: "Roboto-Medium", sans-serif;
+  font-family: 'Roboto-Medium', sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
   position: relative;
@@ -63,7 +56,7 @@
 }
 
 body.light-theme .movie1-searchbar_input_film {
-  border-color: var(--grey-white-theme, #595959);;
+  border-color: var(--grey-white-theme, #595959);
 }
 
 body.light-theme .movie1-search {
@@ -74,7 +67,6 @@ body.light-theme .movie1-search {
 body.light-theme .movie1-searchbar_select_year {
   border: 0.1rem solid var(--grey-white-theme, #595959);
 }
-
 
 /* Hidden Clear Button in Film */
 
@@ -96,7 +88,7 @@ body.light-theme .movie1-searchbar_select_year {
 }
 
 .icon-clear_button:hover {
-  stroke: #F87719;
+  stroke: #f87719;
 }
 
 body.light-theme .icon-clear_button {
@@ -104,9 +96,8 @@ body.light-theme .icon-clear_button {
 }
 
 body.light-theme .icon-clear_button:hover {
-  stroke: #F87719;
+  stroke: #f87719;
 }
-
 
 /* Submit Button */
 
@@ -134,13 +125,9 @@ body.light-theme .icon-clear_button:hover {
   color: var(--highlight-color);
 }
 
-
-
-
 /* Mobile - Search Bar Block */
 
-@media screen and (min-width:320px) {
-
+@media screen and (min-width: 320px) {
   .movie1-searchbar {
     padding-bottom: 1.6rem;
     margin-bottom: 5rem;
@@ -165,7 +152,6 @@ body.light-theme .icon-clear_button:hover {
     margin-right: 12px;
     padding-left: 24px;
     padding-right: 30px;
-
   }
 
   .movie1-searchbar_select_year {
@@ -173,12 +159,11 @@ body.light-theme .icon-clear_button:hover {
     height: 40px;
     padding-left: 16px;
     padding-right: 15px;
-
   }
 
   input::placeholder {
     color: var(--light-gray);
-    font-family: "Roboto-Medium", sans-serif;;
+    font-family: 'Roboto-Medium', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -201,20 +186,17 @@ body.light-theme .icon-clear_button:hover {
     border: 1px solid orangered;
     border-color: var(--orange);
   }
-    
+
   .catalog-gallery-card {
     margin: auto;
     text-align: center;
   }
-
 }
 
 /* Tablet - Search Bar Block */
 
-@media screen and (min-width:768px) {
-
+@media screen and (min-width: 768px) {
   .movie1-searchbar {
-
     padding-bottom: 36px;
     margin-bottom: 0;
   }
@@ -235,7 +217,6 @@ body.light-theme .icon-clear_button:hover {
     height: 44px;
     padding-left: 20px;
     margin-right: 12px;
-
   }
 
   .movie1-searchbar_clear_button {
@@ -246,23 +227,18 @@ body.light-theme .icon-clear_button:hover {
     margin-top: 0;
     width: 44px;
     height: 44px;
-  } 
-
+  }
 }
 
 /* Desktop - Search Bar Block */
 
-@media screen and (min-width:1280px) {
-
+@media screen and (min-width: 1280px) {
   .movie1-searchbar {
-
     padding-bottom: 48px;
   }
 
   .movie1-search {
-
     font-size: 16px;
-
   }
 
   .movie1-searchbar_form {
@@ -274,12 +250,10 @@ body.light-theme .icon-clear_button:hover {
     margin-right: 20px;
     width: 315px;
     height: 48px;
-
   }
 
   .movie1-searchbar_select_year {
     height: 48px;
-
   }
 
   .movie1-searchbar_clear_button {
@@ -287,21 +261,13 @@ body.light-theme .icon-clear_button:hover {
     right: 74px;
   }
 
-  
   .movie1-searchbar_submit_button {
     width: 48px;
     height: 48px;
-  } 
-
+  }
 }
 
-
-
-
-
 /* 2) Movie List Block */
-
-
 
 .movie1-movielist {
   display: flex;
@@ -315,7 +281,7 @@ body.light-theme .icon-clear_button:hover {
   width: calc((100% - 6rem) / 3);
   /* width: 100%; */
   border-radius: 1rem;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
   overflow: hidden;
   color: var(--text-secondary-color);
 }
@@ -328,7 +294,7 @@ body.light-theme .icon-clear_button:hover {
   width: 100%; /* %100 vardı */
   /* height: 57.4rem; */
   border-radius: 5px;
-  
+
   position: relative;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, 1);
@@ -344,7 +310,7 @@ body.light-theme .icon-clear_button:hover {
   font-size: 1.8rem;
   line-height: 1.17;
   padding: 0 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .movie1-movielist_card_info {
@@ -353,7 +319,7 @@ body.light-theme .icon-clear_button:hover {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .movie1-movielist_card_genre {
@@ -366,9 +332,8 @@ body.light-theme .icon-clear_button:hover {
   color: var(--highlight-color);
 }
 
-
-
-@media only screen and (max-width: 1279px) {}
+@media only screen and (max-width: 1279px) {
+}
 
 @media screen and (max-width: 767px) {
   .movie1-movielist {
@@ -384,10 +349,7 @@ body.light-theme .icon-clear_button:hover {
   }
 }
 
-
-
 /* 3) Pagination Block */
-
 
 /* Container için boşluk ve hizalama */
 .pagination-container {
@@ -416,7 +378,7 @@ body.light-theme .icon-clear_button:hover {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
-  font-family: "Roboto-Regular", sans-serif;
+  font-family: 'Roboto-Regular', sans-serif;
   color: #fff;
   border: 0.1rem solid var(--text-primary-color);
   cursor: pointer;
@@ -424,7 +386,7 @@ body.light-theme .icon-clear_button:hover {
 
 .page-btn .number {
   color: var(--text-primary-color);
-} 
+}
 
 .page-btn:hover {
   background: var(--linear-gradient-2);
@@ -483,4 +445,3 @@ body.light-theme .icon-clear_button:hover {
   background: none;
   color: rgba(255, 194, 38, 1);
 }
-
